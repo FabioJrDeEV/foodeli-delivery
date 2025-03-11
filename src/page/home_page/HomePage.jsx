@@ -5,6 +5,7 @@ import Login from "../../assets/img/login.png";
 import Button from "../../assets/img/button.png";
 import Font from "../../assets/img/font.png";
 import Prato from "../../assets/img/prato.png";
+import Play from "../../assets/img/play.png";
 import "./HomePage.css";
 
 const HomePage = () => {
@@ -97,7 +98,7 @@ const HomePage = () => {
                 className="mt-4 img-fluid order-1 order-md-2"
               />
               <p
-                className="mt-5"
+                className="mt-4 mb-0"
                 style={{
                   fontSize: "18px",
                   fontWeight: "500",
@@ -108,6 +109,13 @@ const HomePage = () => {
                 Our job is to filling your tummy with delicious food and with
                 fast and free delivery
               </p>
+              <div className="w-100 d-flex align-items-center gap-0 d-none d-md-flex d-lg-flex">
+                <div>
+                  <button type="button" class="btn btn-color mt-2">
+                    Get Start
+                  </button>
+                </div>
+              </div>
             </div>
             <div className="col-12 col-md-6 col-lg-6 mt-3 mt-md-5 mt-lg-0 order-2 order-md-1">
               <img
@@ -120,6 +128,10 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="w-100 min-vh-100">
+        <div className="container"></div>
       </section>
     </div>
   );

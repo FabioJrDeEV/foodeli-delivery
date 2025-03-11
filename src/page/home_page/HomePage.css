@@ -1,3 +1,25 @@
 .space {
   margin-top: 100px;
 }
+
+.btn-color {
+  width: 186px;
+  height: 68px;
+  background-color: #eb0029;
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  padding: 11px 20px;
+  transition: 0.6s;
+}
+
+.btn-color:hover {
+  background-color: #cc0728;
+  color: #fff;
+}
+
+.position-img {
+  position: absolute;
+  right: 52%;
+}
