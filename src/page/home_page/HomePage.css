@@ -2,6 +2,10 @@
   margin-top: 100px;
 }
 
+.space2 {
+  margin-left: 120px;
+}
+
 .btn-color {
   width: 186px;
   height: 68px;
@@ -22,4 +26,12 @@
 .position-img {
   position: absolute;
   right: 52%;
+}
+
+.position {
+  left: 48px;
+}
+
+.position3 {
+  left: 98px;
 }

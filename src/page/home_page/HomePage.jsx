@@ -5,7 +5,11 @@ import Login from "../../assets/img/login.png";
 import Button from "../../assets/img/button.png";
 import Font from "../../assets/img/font.png";
 import Prato from "../../assets/img/prato.png";
-import Play from "../../assets/img/play.png";
+import Circle from "../../assets/img/play_circle.png";
+import Pessoa from "../../assets/img/pessoa1.png";
+import Pessoa2 from "../../assets/img/pessoa2.png";
+import Pessoa3 from "../../assets/img/pessoa3.png";
+import Stars from "../../assets/img/stars.png";
 import "./HomePage.css";
 
 const HomePage = () => {
@@ -109,10 +113,22 @@ const HomePage = () => {
                 Our job is to filling your tummy with delicious food and with
                 fast and free delivery
               </p>
-              <div className="w-100 d-flex align-items-center gap-0 d-none d-md-flex d-lg-flex">
+              <div className="w-100 d-flex align-items-center mt-3 mt-md-2 gap-2 d-none d-md-flex d-lg-flex">
                 <div>
-                  <button type="button" class="btn btn-color mt-2">
+                  <button type="button" className="btn btn-color mt-2">
                     Get Start
+                  </button>
+                </div>
+                <div className="w-100 d-flex align-items-center ">
+                  <div className="ms-3 p-0">
+                    <button className="btn border-0 bg-transparent">
+                      <img src={Circle} alt="Play circle" width="49px" />
+                    </button>
+                  </div>
+                  <button className="btn border-0 bg-transparent p-0">
+                    <p className="mt-3 fw-medium" style={{ maxWidth: "150px" }}>
+                      Watch Video
+                    </p>
                   </button>
                 </div>
               </div>
@@ -125,6 +141,29 @@ const HomePage = () => {
                 height="auto"
                 className="img-fluid"
               />
+            </div>
+          </div>
+          <div className="w-100 d-flex mt-5 mt-mb-5 mt-lg-0">
+            <div className="d-flex position-relative">
+              <img src={Pessoa} alt="Pessoa 01" />
+              <img
+                src={Pessoa2}
+                alt="Pessoa 02"
+                className="position-absolute position"
+              />
+              <img
+                src={Pessoa3}
+                alt="Pessoa 03"
+                className="position-absolute position3"
+              />
+            </div>
+            <div className="w-100 d-flex flex-column space2 ">
+              <div>
+                <p className="fw-medium m-2">Our Happy Customer</p>
+              </div>
+              <div>
+                <img src={Stars} alt="Stars" />
+              </div>
             </div>
           </div>
         </div>
