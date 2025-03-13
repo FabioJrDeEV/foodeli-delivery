@@ -10,11 +10,14 @@ import Pessoa from "../../assets/img/pessoa1.png";
 import Pessoa2 from "../../assets/img/pessoa2.png";
 import Pessoa3 from "../../assets/img/pessoa3.png";
 import Stars from "../../assets/img/stars.png";
+import Card01 from "../../assets/img/card01.png";
+import Card02 from "../../assets/img/card02.png";
+import Card03 from "../../assets/img/card03.png";
 import "./HomePage.css";
 
 const HomePage = () => {
   return (
-    <div className="w-100 min-vh-100">
+    <div className="w-100">
       <nav className="navbar navbar-expand-lg p-3">
         <div className="container">
           <a className="navbar-brand" href="#">
@@ -83,7 +86,7 @@ const HomePage = () => {
         </div>
       </nav>
 
-      <section className="w-100 min-vh-100">
+      <section className="w-100 mb">
         <div className="container mt-5 mt-md-5 mt-lg-5">
           <div className="row">
             <div className="col-12 col-md-6 col-lg-6">
@@ -143,9 +146,9 @@ const HomePage = () => {
               />
             </div>
           </div>
-          <div className="w-100 d-flex mt-5 mt-mb-5 mt-lg-0">
+          <div className="w-100 d-flex mt-5 mt-md-5 mt-lg-0">
             <div className="d-flex position-relative">
-              <img src={Pessoa} alt="Pessoa 01" />
+              <img src={Pessoa} alt="Pessoa 01" className="position-absolute" />
               <img
                 src={Pessoa2}
                 alt="Pessoa 02"
@@ -157,12 +160,18 @@ const HomePage = () => {
                 className="position-absolute position3"
               />
             </div>
-            <div className="w-100 d-flex flex-column space2 ">
-              <div>
-                <p className="fw-medium m-2">Our Happy Customer</p>
+            <div className="w-100 d-flex flex-column position-relative">
+              <div className="mb-2">
+                <p className="fw-medium m-2 me-4 position-absolute position-text">
+                  Our Happy Customer
+                </p>
               </div>
-              <div>
-                <img src={Stars} alt="Stars" />
+              <div className="mt-4">
+                <img
+                  src={Stars}
+                  alt="Stars"
+                  className="position-absolute position-text"
+                />
               </div>
             </div>
           </div>
@@ -170,7 +179,68 @@ const HomePage = () => {
       </section>
 
       <section className="w-100 min-vh-100">
-        <div className="container"></div>
+        <div className="container">
+          <div className="w-100 mt-5">
+            <h2 className="text-center fs-6 text-danger mb-3 text-uppercase">
+              What we server
+            </h2>
+          </div>
+          <div className="w-100 d-flex justify-content-center ">
+            <h1
+              className="text-center"
+              style={{ fontWeight: "700", maxWidth: "532px", fontSize: "45px" }}
+            >
+              Your Favourite Food Delivery Partner
+            </h1>
+          </div>
+          <div className="row mt-4 align-items-start justify-content-center">
+            <div className="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
+              <div className="card border-0" style={{ width: "15rem" }}>
+                <img
+                  src={Card01}
+                  alt="Card 01"
+                  style={{ height: "205px", objectFit: "cover" }}
+                />
+                <div className="card-body">
+                  <h5 className="card-title text-center">Easy To Order</h5>
+                  <p className="card-text text-center">
+                    You only need a few steps in ordering food
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
+              <div className="card border-0" style={{ width: "15rem" }}>
+                <img
+                  src={Card02}
+                  alt="Card 02"
+                  style={{ height: "230px", objectFit: "cover" }}
+                />
+                <div className="card-body">
+                  <h5 className="card-title text-center">Fastest Delivery</h5>
+                  <p className="card-text text-center">
+                    Delivery that is always ontime even faster
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
+              <div className="card border-0" style={{ width: "15rem" }}>
+                <img
+                  src={Card03}
+                  alt="Card 03"
+                  style={{ height: "230px", objectFit: "cover" }}
+                />
+                <div className="card-body">
+                  <h5 className="card-title text-center">Best Quality</h5>
+                  <p className="card-text text-center">
+                    Not only fast for us quality is also number one
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
