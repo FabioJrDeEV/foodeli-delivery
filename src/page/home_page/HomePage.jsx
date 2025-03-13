@@ -13,11 +13,18 @@ import Stars from "../../assets/img/stars.png";
 import Card01 from "../../assets/img/card01.png";
 import Card02 from "../../assets/img/card02.png";
 import Card03 from "../../assets/img/card03.png";
+import Img1 from "../../assets/img/hamburger.png";
+import Img2 from "../../assets/img/cupcake.png";
+import Img3 from "../../assets/img/ramen.png";
 import "./HomePage.css";
+import { useState } from "react";
 
 const HomePage = () => {
+  const [isActived, setIsActived] = useState("why");
+  const [isMenuActived, setIsMenuActived] = useState("cupcake");
+
   return (
-    <div className="w-100">
+    <div className="w-100 min-vh-100">
       <nav className="navbar navbar-expand-lg p-3">
         <div className="container">
           <a className="navbar-brand" href="#">
@@ -40,22 +47,47 @@ const HomePage = () => {
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-4">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a
+                  className={`nav-link ${
+                    isActived === "why" ? "isActive" : ""
+                  }`}
+                  onClick={() => setIsActived("why")}
+                  aria-current="page"
+                  href="#"
+                >
                   Why Foodeli?
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a
+                  className={`nav-link ${
+                    isActived === "service" ? "isActive" : ""
+                  }`}
+                  onClick={() => setIsActived("service")}
+                  href="#"
+                >
                   Services
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a
+                  className={`nav-link ${
+                    isActived === "menu" ? "isActive" : ""
+                  }`}
+                  onClick={() => setIsActived("menu")}
+                  href="#"
+                >
                   Menu
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a
+                  className={`nav-link ${
+                    isActived === "contact" ? "isActive" : ""
+                  }`}
+                  onClick={() => setIsActived("contact")}
+                  href="#"
+                >
                   Contact
                 </a>
               </li>
@@ -178,7 +210,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="w-100 min-vh-100">
+      <section className="w-100 mb">
         <div className="container">
           <div className="w-100 mt-5">
             <h2 className="text-center fs-6 text-danger mb-3 text-uppercase">
@@ -199,10 +231,20 @@ const HomePage = () => {
                 <img
                   src={Card01}
                   alt="Card 01"
-                  style={{ height: "205px", objectFit: "cover" }}
+                  style={{
+                    height: "230px",
+                    objectFit: "cover",
+                  }}
                 />
                 <div className="card-body">
-                  <h5 className="card-title text-center">Easy To Order</h5>
+                  <h5
+                    className="card-title text-center"
+                    style={{
+                      fontWeight: "700",
+                    }}
+                  >
+                    Easy To Order
+                  </h5>
                   <p className="card-text text-center">
                     You only need a few steps in ordering food
                   </p>
@@ -217,7 +259,12 @@ const HomePage = () => {
                   style={{ height: "230px", objectFit: "cover" }}
                 />
                 <div className="card-body">
-                  <h5 className="card-title text-center">Fastest Delivery</h5>
+                  <h5
+                    className="card-title text-center"
+                    style={{ fontWeight: "700" }}
+                  >
+                    Fastest Delivery
+                  </h5>
                   <p className="card-text text-center">
                     Delivery that is always ontime even faster
                   </p>
@@ -232,12 +279,61 @@ const HomePage = () => {
                   style={{ height: "230px", objectFit: "cover" }}
                 />
                 <div className="card-body">
-                  <h5 className="card-title text-center">Best Quality</h5>
+                  <h5
+                    className="card-title text-center"
+                    style={{ fontWeight: "700" }}
+                  >
+                    Best Quality
+                  </h5>
                   <p className="card-text text-center">
                     Not only fast for us quality is also number one
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-100">
+        <div className="container">
+          <div className="d-flex flex-column mb-4">
+            <h2
+              className="text-uppercase text-danger pb-2"
+              style={{ fontSize: "18px" }}
+            >
+              Our Menu
+            </h2>
+            <h1 style={{ fontSize: "45px", fontWeight: "700", width: "532px" }}>
+              Menu That Always Makes You Fall In Love
+            </h1>
+          </div>
+          <div className="row">
+            <div className="d-flex flex-column justify-content-start">
+              <ul className="width p-3 border-end border-3 border-black">
+                <li className="text-decoration-none align-items-center d-flex p-2">
+                  <img src={Img1} alt="" />
+                  <p className="mt-3 ms-4">Burger</p>
+                </li>
+                <li
+                  className={`text-decoration-none align-items-center d-flex p-2 w-100 ${
+                    isMenuActived === "cupcake" ? "active" : ""
+                  }`}
+                  onClick={() => setIsMenuActived("cupcake")}
+                >
+                  <img src={Img2} alt="" />
+                  <p className="mt-3 ms-4">Cupcake</p>
+                </li>
+
+                <li className="text-decoration-none align-items-center d-flex p-2">
+                  <img src={Img3} alt="" width="41px" />
+                  <p className="mt-3 ms-4">Ramen</p>
+                </li>
+                <li className="text-decoration-none align-items-center d-flex p-2">
+                  <img src={Img2} alt="" />
+                  <p className="mt-3 ms-4">Ice Cream</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
