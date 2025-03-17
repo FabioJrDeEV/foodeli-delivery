@@ -16,6 +16,11 @@ import Card03 from "../../assets/img/card03.png";
 import Img1 from "../../assets/img/hamburger.png";
 import Img2 from "../../assets/img/cupcake.png";
 import Img3 from "../../assets/img/ramen.png";
+import MenuH from "../../assets/img/menuH.png";
+import Seta from "../../assets/img/seta.svg";
+import Comida from "../../assets/img/comida.png";
+import Chefe from "../../assets/img/chefe.png";
+import Starss from "../../assets/img/starss.png";
 import "./HomePage.css";
 import { useState } from "react";
 
@@ -295,7 +300,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="w-100">
+      <section className="w-100 mb">
         <div className="container">
           <div className="d-flex flex-column mb-4">
             <h2
@@ -309,11 +314,11 @@ const HomePage = () => {
             </h1>
           </div>
           <div className="row">
-            <div className="d-flex flex-column justify-content-start">
+            <div className="col-12 col-md-6 col-lg-4 justify-content-start mb-4">
               <ul className="width p-3 border-end border-3 border-black">
                 <li className="text-decoration-none align-items-center d-flex p-2">
                   <img src={Img1} alt="" />
-                  <p className="mt-3 ms-4">Burger</p>
+                  <p className="mt-4 ms-4">Burger</p>
                 </li>
                 <li
                   className={`text-decoration-none align-items-center d-flex p-2 w-100 ${
@@ -322,18 +327,144 @@ const HomePage = () => {
                   onClick={() => setIsMenuActived("cupcake")}
                 >
                   <img src={Img2} alt="" />
-                  <p className="mt-3 ms-4">Cupcake</p>
+                  <p className="mt-4 ms-4">Cupcake</p>
                 </li>
 
                 <li className="text-decoration-none align-items-center d-flex p-2">
                   <img src={Img3} alt="" width="41px" />
-                  <p className="mt-3 ms-4">Ramen</p>
+                  <p className="mt-4 ms-4">Ramen</p>
                 </li>
                 <li className="text-decoration-none align-items-center d-flex p-2">
                   <img src={Img2} alt="" />
-                  <p className="mt-3 ms-4">Ice Cream</p>
+                  <p className="mt-4 ms-4">Ice Cream</p>
                 </li>
               </ul>
+            </div>
+            <div className="col-12 col-md-6 col-lg-4 mb-4 mb-md-4 mb-lg-0">
+              <div
+                className="card position-relative border-0"
+                style={{ width: "15rem" }}
+              >
+                <img
+                  src={MenuH}
+                  className="card-img rounded-5"
+                  alt="Italian Pizza"
+                  width="300px"
+                  height="360px"
+                  style={{ objectFit: "cover" }}
+                />
+                <div className="card-img-overlay position-absolute top-50 mt-5 p-1 ms-3">
+                  <h5
+                    className="card-title text-light"
+                    style={{ fontSize: "24px", fontWeight: "500" }}
+                  >
+                    Italian Pizza
+                  </h5>
+                  <p
+                    className="card-text text-light"
+                    style={{ fontSize: "24px", fontWeight: "700" }}
+                  >
+                    <span className="text-warning" style={{ fontSize: "18px" }}>
+                      $
+                    </span>{" "}
+                    7.49
+                  </p>
+                  <a
+                    href="#"
+                    className="text-decoration-none text-light"
+                    style={{ fontSize: "14px" }}
+                  >
+                    Order Now{" "}
+                    <img src={Seta} alt="" width="17px" className="ms-2" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-4 col-lg-4 ">
+              <div
+                className="card position-relative border-0 p-0"
+                style={{ width: "15rem" }}
+              >
+                <img
+                  src={Comida}
+                  className="card-img rounded-5"
+                  alt="Italian Pizza"
+                  width="300px"
+                  height="360px"
+                  style={{ objectFit: "cover" }}
+                />
+                <div className="card-img-overlay position-absolute top-50 mt-5 p-1 ms-3">
+                  <h5
+                    className="card-title text-light"
+                    style={{ fontSize: "24px", fontWeight: "500" }}
+                  >
+                    Sausage Pizza
+                  </h5>
+                  <p
+                    className="card-text text-light"
+                    style={{ fontSize: "24px", fontWeight: "700" }}
+                  >
+                    <span className="text-warning" style={{ fontSize: "18px" }}>
+                      $
+                    </span>{" "}
+                    6.59
+                  </p>
+                  <a
+                    href="#"
+                    className="text-decoration-none text-light"
+                    style={{ fontSize: "14px" }}
+                  >
+                    Order Now{" "}
+                    <img src={Seta} alt="" width="17px" className="ms-2" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-100 mb">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-md-12 col-lg-6">
+              <img src={Chefe} alt="Cozinheiro" width="500px" />
+            </div>
+            <div className="col-12 col-md-12 col-lg-6 mt-5">
+              <div className="d-flex flex-column">
+                <h3 className="text-danger fs-6 mt-3 mt-md-3 mt-lg-5">
+                  WHAT THEY SAY
+                </h3>
+                <h1
+                  className="fw-bold fs-3"
+                  style={{ maxWidth: "350px", lineHeight: "50px" }}
+                >
+                  What Our Customers Say About Us
+                </h1>
+                <p
+                  className="fs-5"
+                  style={{ maxWidth: "500px", lineHeight: "30px" }}
+                >
+                  “Fudo is the best. Besides the many and delicious meals, the
+                  service is also very good, especially in the very fast
+                  delivey. I highly recommend Fudo to you”.
+                </p>
+                <div className="d-flex align-items-center gap-3 mt-3">
+                  <div>
+                    <img src={Pessoa} alt="Pessoa 01" />
+                  </div>
+                  <div className="d-flex flex-column">
+                    <p className="m-0 fw-medium fs-6">Theresa Jordan</p>
+                    <p className="text-muted">Food Enthusiast</p>
+                  </div>
+                </div>
+                <div className="mt-3 d-flex align-items-center">
+                  <img src={Starss} width="150px" alt="Stars" />
+                  <div>
+                    <p className="mt-3 ms-3 fw-medium">4,8</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
