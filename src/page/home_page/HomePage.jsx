@@ -21,6 +21,12 @@ import Seta from "../../assets/img/seta.svg";
 import Comida from "../../assets/img/comida.png";
 import Chefe from "../../assets/img/chefe.png";
 import Starss from "../../assets/img/starss.png";
+import CardShop from "../../assets/img/cardshop.png";
+import Frame from "../../assets/img/frame.png";
+import Location from "../../assets/img/location.png";
+import Emoji from "../../assets/img/emoji.png";
+import MotoBoy from "../../assets/img/motoboy.png";
+import Pizza from "../../assets/img/pizza.png";
 import "./HomePage.css";
 import { useState } from "react";
 
@@ -314,7 +320,7 @@ const HomePage = () => {
             </h1>
           </div>
           <div className="row">
-            <div className="col-12 col-md-6 col-lg-4 justify-content-start mb-4">
+            <div className="col-12 col-md-6 col-lg-4 justify-content-start mb-4 mb-md-4 mb-lg-0">
               <ul className="width p-3 border-end border-3 border-black">
                 <li className="text-decoration-none align-items-center d-flex p-2">
                   <img src={Img1} alt="" />
@@ -462,6 +468,146 @@ const HomePage = () => {
                   <img src={Starss} width="150px" alt="Stars" />
                   <div>
                     <p className="mt-3 ms-3 fw-medium">4,8</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-100 mb">
+        <div className="container color-bg rounded-4">
+          <div className="row p-0">
+            <div className="col-12 col-md-6 col-lg-5 mt-5 p-5">
+              <div className="d-flex flex-column">
+                <h2 className="text-uppercase isActive fs-5 fw-medium mb-4">
+                  Download app
+                </h2>
+                <h1
+                  className="fw-bolder mb-4"
+                  style={{ maxWidth: "360px", lineHeight: "60px" }}
+                >
+                  Get Started With Fudo Today!
+                </h1>
+                <p className="fw-medium mb-4" style={{ maxWidth: "400px" }}>
+                  Discover food wherever and whenever and get your food
+                  delivered quickly.
+                </p>
+                <button className="btn btn-color text-capitalize">
+                  Get the app
+                </button>
+              </div>
+            </div>
+            <div className="col-12 col-md-6 col-lg-2">
+              <div className="h-100 d-flex align-items-center">
+                <div
+                  className="background rounded-3"
+                  style={{ height: "180px", width: "118px" }}
+                >
+                  <div className="d-flex justify-content-center">
+                    <div
+                      className="bg-white mt-3"
+                      style={{
+                        width: "80px",
+                        height: "80px",
+                        borderRadius: "50%",
+                      }}
+                    >
+                      <div className="d-flex justify-content-center align-items-center">
+                        <div className="mt-4">
+                          <img
+                            src={CardShop}
+                            alt="Card Shop"
+                            className="mt-1"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    className="mt-3 text-center text-light fw-medium"
+                    style={{
+                      maxWidth: "150px",
+                      fontSize: "13px",
+                      lineHeight: "22px",
+                    }}
+                  >
+                    Your Food Has Arrived
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-12 col-lg-5">
+              <div className="h-100 w-75 p-3 rounded-5 bg-white mt-5">
+                <div className="d-flex mt-5 justify-content-around align-items-center">
+                  <div>
+                    <img src={Frame} alt="frame" />
+                  </div>
+                  <div>
+                    <img src={Location} alt="Location" />
+                  </div>
+                  <div>
+                    <img src={Emoji} alt="Emoji" />
+                  </div>
+                </div>
+                <div className="mt-3 color-bg rounded-4">
+                  <div className="d-flex p-3 align-items-center">
+                    <div>
+                      <h1
+                        className="fs-5 fw-medium"
+                        style={{ maxWidth: "140px", lineHeight: "28px" }}
+                      >
+                        The Fastest In Delivery{" "}
+                        <span className="isActive">Food</span>
+                      </h1>
+                      <div>
+                        <button className="btn btn-danger mt-2 fs-6 rounded-5 p-2">
+                          Order Now
+                        </button>
+                      </div>
+                    </div>
+                    <div>
+                      <img src={MotoBoy} alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <h4 className="fw-bold">Categories</h4>
+                  <div className="d-flex gap-2">
+                    <div className="d-flex mt-2">
+                      <button
+                        className="btn btn-danger d-flex align-items-center rounded-5"
+                        style={{ width: "150px" }}
+                      >
+                        <div className="bg-white rounded-5 p-2 rounded-5">
+                          <img src={Img1} width="18px" alt="Hamburguer" />
+                        </div>
+                        <p className="mt-3 ms-4 fw-bold">Burger</p>
+                      </button>
+                    </div>
+                    <div className="d-flex mt-2">
+                      <button
+                        className="btn bg-body-secondary d-flex align-items-center rounded-5"
+                        style={{ width: "150px" }}
+                      >
+                        <div className="bg-white p-2 rounded-5">
+                          <img src={Pizza} alt="Pizza " />
+                        </div>
+                        <p className="mt-3 ms-4 fw-bold">Pizza</p>
+                      </button>
+                    </div>
+                    <div className="d-flex mt-2">
+                      <button
+                        className="btn bg-body-secondary d-flex align-items-center rounded-5"
+                        style={{ width: "150px" }}
+                      >
+                        <div className="bg-white p-2 rounded-5">
+                          <img src={Img2} width="18px" alt="Pizza " />
+                        </div>
+                        <p className="mt-3 ms-3 fw-bold">Cupcake</p>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
